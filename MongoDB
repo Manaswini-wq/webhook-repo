@@ -1,0 +1,43 @@
+PUSH REQUEST:
+
+{ action: "PUSH" }
+
+EVENT:
+_id: 686974ddb345f68ecb6c2ca2
+request_id: "new456"
+author: "newuser"
+action: "PUSH"
+from_branch: null
+to_branch: "main"
+timestamp: "2025-07-05T18:54:21.507972"
+
+
+PULL REQUEST:
+
+{ action: "PULL REQUEST" }
+
+EVENT:
+_id: 686974ddb345f68ecb6c2ca2
+request_id: "new456"
+author: "newuser"
+action: "PULL REQUEST"
+from_branch: null
+to_branch: "main"
+timestamp: "2025-07-05T18:54:21.507972"
+
+
+MERGE:
+
+
+{ action: "MERGE" }
+
+
+EVENT:
+_id: 686974ddb345f68ecb6c2ca2
+request_id: "new456"
+author: "newuser"
+action: "MERGE"
+from_branch: null
+to_branch: "main"
+timestamp: "2025-07-05T18:54:21.507972"
+
