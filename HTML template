@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Events</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .event { padding: 10px; margin: 5px; background: #f5f5f5; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>GitHub Events Monitor</h1>
+    <div id="events-container"></div>
 
+    <script>
+    function fetchEvents() {
+        fetch('/api/events')
+            .then(response => {
+                if (!response.ok) throw new Error('Network error');
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('events-container').innerHTML = 
+                    data.map(event => `<div class="event">${event}</div>`).join('');
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    setInterval(fetchEvents, 15000);
+    fetchEvents();
+    </script>
+</body>
+</html>
